@@ -1,0 +1,12 @@
+C:\Users\Shawn Oppermann\source\repos\DoctorScheduling\DoctorScheduling\obj\Debug\DoctorScheduling.csprojAssemblyReference.cache
+C:\Users\Shawn Oppermann\source\repos\DoctorScheduling\DoctorScheduling\obj\Debug\DoctorScheduling.MainForm.resources
+C:\Users\Shawn Oppermann\source\repos\DoctorScheduling\DoctorScheduling\obj\Debug\DoctorScheduling.Properties.Resources.resources
+C:\Users\Shawn Oppermann\source\repos\DoctorScheduling\DoctorScheduling\obj\Debug\DoctorScheduling.csproj.GenerateResource.cache
+C:\Users\Shawn Oppermann\source\repos\DoctorScheduling\DoctorScheduling\obj\Debug\DoctorScheduling.csproj.CoreCompileInputs.cache
+C:\Users\Shawn Oppermann\source\repos\DoctorScheduling\DoctorScheduling\bin\Debug\DoctorScheduling.exe.config
+C:\Users\Shawn Oppermann\source\repos\DoctorScheduling\DoctorScheduling\bin\Debug\DoctorScheduling.exe
+C:\Users\Shawn Oppermann\source\repos\DoctorScheduling\DoctorScheduling\bin\Debug\DoctorScheduling.pdb
+C:\Users\Shawn Oppermann\source\repos\DoctorScheduling\DoctorScheduling\obj\Debug\DoctorScheduling.exe
+C:\Users\Shawn Oppermann\source\repos\DoctorScheduling\DoctorScheduling\obj\Debug\DoctorScheduling.pdb
+C:\Users\Shawn Oppermann\source\repos\DoctorScheduling\DoctorScheduling\obj\Debug\DoctorScheduling.DoctorForm.resources
+C:\Users\Shawn Oppermann\source\repos\DoctorScheduling\DoctorScheduling\obj\Debug\DoctorScheduling.ConstraintForm.resources
