@@ -1,21 +1,20 @@
+import java.time.LocalDateTime;
+
 public class Request {
     //the shift in question
-    private Shift requestedShift;
+
+    //start time
+    private LocalDateTime start;
+
+    //end time
+    private LocalDateTime end;
 
     //the priority or how many points to lose if broken
     private int priority;
 
     //whether the shift is wanted or unwanted
     private boolean wanted;
-
-    public void setRequestedShift(Shift requestedShift) {
-        this.requestedShift = requestedShift;
-    }
-
-    public Shift getRequestedShift() {
-        return requestedShift;
-    }
-
+    
     public void setPriority(int priority) {
         this.priority = priority;
     }
@@ -30,5 +29,21 @@ public class Request {
 
     public boolean getWanted() {
         return wanted;
+    }
+
+    public LocalDateTime getStart() {
+        return start;
+    }
+
+    public void setStart(LocalDateTime start) {
+        this.start = start;
+    }
+
+    public LocalDateTime getEnd() {
+        return end;
+    }
+
+    public void setEnd(LocalDateTime end) {
+        this.end = end;
     }
 }

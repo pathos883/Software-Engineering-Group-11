@@ -1,18 +1,18 @@
 import org.optaplanner.core.api.domain.entity.PlanningEntity;
 import org.optaplanner.core.api.domain.variable.PlanningVariable;
 
+import java.time.LocalDateTime;
+
 @PlanningEntity
 public class Shift {
-    //holiday status
-
     //day of the week
     private String dayOfWeek;
 
     //start time
-    private String startTime;
+    private LocalDateTime startTime;
 
     //end time
-    private String endTime;
+    private LocalDateTime endTime;
 
     //doctor to work that shift
     @PlanningVariable
@@ -26,19 +26,19 @@ public class Shift {
         return dayOfWeek;
     }
 
-    public String getStartTime() {
+    public LocalDateTime getStartTime() {
         return startTime;
     }
 
-    public void setStartTime(String startTime) {
+    public void setStartTime(LocalDateTime startTime) {
         this.startTime = startTime;
     }
 
-    public String getEndTime() {
+    public LocalDateTime getEndTime() {
         return endTime;
     }
 
-    public void setEndTime(String endTime) {
+    public void setEndTime(LocalDateTime endTime) {
         this.endTime = endTime;
     }
 

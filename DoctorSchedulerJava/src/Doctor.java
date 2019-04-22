@@ -11,7 +11,7 @@ public class Doctor {
     private double hoursToWork;
 
     //list of requested days / shifts on or off
-    private ArrayList<Shift> shiftRequests;
+    private ArrayList<Request> requests;
 
     public String getName() {
         return name;
@@ -37,11 +37,11 @@ public class Doctor {
         this.hoursToWork = hoursToWork;
     }
 
-    public ArrayList<Shift> getShiftRequests() {
-        return shiftRequests;
+    public ArrayList<Request> getShiftRequests() {
+        return requests;
     }
 
-    public void setShiftRequests(ArrayList<Shift> shiftRequests) {
-        this.shiftRequests = shiftRequests;
+    public void setShiftRequests(ArrayList<Request> shiftRequests) {
+        this.requests = shiftRequests;
     }
 }
