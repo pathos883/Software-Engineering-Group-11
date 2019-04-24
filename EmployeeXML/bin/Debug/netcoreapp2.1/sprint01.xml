@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<SchedulingPeriod ID="sprint01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" noNamespaceSchemaLocation="competition.xsd">
+  <StartTime>2010-01-1</StartTime>
+  <EndTime>2010-01-28</EndTime>
+  <Skills />
+  <ShiftTypes />
+  <Patterns />
+  <Contracts />
+  <Employees />
+  <CoverRequirements />
+  <DayOffRequests />
+  <ShiftOffRequests />
+</SchedulingPeriod>

@@ -1,0 +1,11 @@
+C:\Users\Tristan\Desktop\Group 11 Workspace\Software-Engineering-Group-11\Software-Engineering-Group-11\EmployeeXML\obj\Debug\netcoreapp2.1\Software-Engineering-Group-11.csprojAssemblyReference.cache
+C:\Users\Tristan\Desktop\Group 11 Workspace\Software-Engineering-Group-11\Software-Engineering-Group-11\EmployeeXML\obj\Debug\netcoreapp2.1\Software-Engineering-Group-11.csproj.CoreCompileInputs.cache
+C:\Users\Tristan\Desktop\Group 11 Workspace\Software-Engineering-Group-11\Software-Engineering-Group-11\EmployeeXML\obj\Debug\netcoreapp2.1\Software-Engineering-Group-11.AssemblyInfoInputs.cache
+C:\Users\Tristan\Desktop\Group 11 Workspace\Software-Engineering-Group-11\Software-Engineering-Group-11\EmployeeXML\obj\Debug\netcoreapp2.1\Software-Engineering-Group-11.AssemblyInfo.cs
+C:\Users\Tristan\Desktop\Group 11 Workspace\Software-Engineering-Group-11\Software-Engineering-Group-11\EmployeeXML\bin\Debug\netcoreapp2.1\Software-Engineering-Group-11.deps.json
+C:\Users\Tristan\Desktop\Group 11 Workspace\Software-Engineering-Group-11\Software-Engineering-Group-11\EmployeeXML\bin\Debug\netcoreapp2.1\Software-Engineering-Group-11.runtimeconfig.json
+C:\Users\Tristan\Desktop\Group 11 Workspace\Software-Engineering-Group-11\Software-Engineering-Group-11\EmployeeXML\bin\Debug\netcoreapp2.1\Software-Engineering-Group-11.runtimeconfig.dev.json
+C:\Users\Tristan\Desktop\Group 11 Workspace\Software-Engineering-Group-11\Software-Engineering-Group-11\EmployeeXML\bin\Debug\netcoreapp2.1\Software-Engineering-Group-11.dll
+C:\Users\Tristan\Desktop\Group 11 Workspace\Software-Engineering-Group-11\Software-Engineering-Group-11\EmployeeXML\bin\Debug\netcoreapp2.1\Software-Engineering-Group-11.pdb
+C:\Users\Tristan\Desktop\Group 11 Workspace\Software-Engineering-Group-11\Software-Engineering-Group-11\EmployeeXML\obj\Debug\netcoreapp2.1\Software-Engineering-Group-11.dll
+C:\Users\Tristan\Desktop\Group 11 Workspace\Software-Engineering-Group-11\Software-Engineering-Group-11\EmployeeXML\obj\Debug\netcoreapp2.1\Software-Engineering-Group-11.pdb
