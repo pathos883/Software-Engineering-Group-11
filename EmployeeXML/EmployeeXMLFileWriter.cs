@@ -11,12 +11,12 @@ public class EmployeeXMLFileWriter
 {
     private XmlDocument xmlDoc;
     private XmlNode rootNode;
-    private XmlNode SkillsNode;
+    //private XmlNode SkillsNode;
     private XmlNode ShiftTypesNode;
-    private XmlNode PatternsNode;
-    private XmlNode ContractsNode;
+    //private XmlNode PatternsNode;
+    //private XmlNode ContractsNode;
     private XmlNode EmployeesNode;
-    private XmlNode CoverRequirementsNode;
+    //private XmlNode CoverRequirementsNode;
 	private XmlNode DayOffRequestsNode;
 	private XmlNode ShiftOffRequestsNode;
 
@@ -44,18 +44,18 @@ public class EmployeeXMLFileWriter
         XmlNode endNode = xmlDoc.CreateElement("EndTime");
         endNode.InnerText = ConvertDTDate(endTime);
         rootNode.AppendChild(endNode);
-        SkillsNode = xmlDoc.CreateElement("Skills");
+        /*SkillsNode = xmlDoc.CreateElement("Skills");
         rootNode.AppendChild(SkillsNode);
         ShiftTypesNode = xmlDoc.CreateElement("ShiftTypes");
         rootNode.AppendChild(ShiftTypesNode);
         PatternsNode = xmlDoc.CreateElement("Patterns");
         rootNode.AppendChild(PatternsNode);
         ContractsNode = xmlDoc.CreateElement("Contracts");
-        rootNode.AppendChild(ContractsNode);
+        rootNode.AppendChild(ContractsNode);*/
         EmployeesNode = xmlDoc.CreateElement("Employees");
         rootNode.AppendChild(EmployeesNode);
-        CoverRequirementsNode = xmlDoc.CreateElement("CoverRequirements");
-        rootNode.AppendChild(CoverRequirementsNode);
+        /*CoverRequirementsNode = xmlDoc.CreateElement("CoverRequirements");
+        rootNode.AppendChild(CoverRequirementsNode);*/
 		DayOffRequestsNode = xmlDoc.CreateElement("DayOffRequests");
         rootNode.AppendChild(DayOffRequestsNode);
 		ShiftOffRequestsNode = xmlDoc.CreateElement("ShiftOffRequests");
@@ -73,13 +73,13 @@ public class EmployeeXMLFileWriter
      * an employee can have. Shifts and employees are assigned 
      * skills and only an employee with all the skills assigned
      * to a shift can work that shift.
-     */
+     *
     public void WriteSkill(string skillName)
     {
         XmlNode skillNode = xmlDoc.CreateElement("Skill");
         skillNode.InnerText = skillName;
         SkillsNode.AppendChild(skillNode);
-    }
+    } */
 
 
     /*
@@ -120,7 +120,7 @@ public class EmployeeXMLFileWriter
      * A Day can be a day of the week, Any, None.
      * patternEntries is an array of [x][2], where [x][0] is 
      * the shifttype and [x][1] is the day
-     */
+     *
     public void WritePattern(string patternID, string patternWeight, string[][] patternEntries)
 	{
 		XmlNode patternNode = xmlDoc.CreateElement("Pattern");
@@ -143,9 +143,10 @@ public class EmployeeXMLFileWriter
 			XmlNode dayNode = xmlDoc.CreateElement("Day");
 			dayNode.InnerText = patternEntries[i][1];
 			patternEntryNode.AppendChild(dayNode);
-		}
-		patternNode.AppendChild(patternEntriesNode);
-	}
+            patternNode.AppendChild(patternEntriesNode);
+        }
+        PatternsNode.AppendChild(patternNode);
+	}*/
 
     /*
      * Contracts are defined in the schema file.
@@ -186,8 +187,10 @@ public class EmployeeXMLFileWriter
     }
 	
 	/*
+	 * Cover requirements defines how the shifts are laid out accross the week and how
+     * many doctors are needed at each shift. Implementing this will increase the
+     * flexibility of how many options there are to connfigure shifts
 	 *
-	 */
 	public void WriteCoverRequirements(string day, string[][] covers)
 	{
 		XmlNode dayOfWeekCoverNode = xmlDoc.CreateElement("DayOfWeekCover");
@@ -206,7 +209,7 @@ public class EmployeeXMLFileWriter
 			dayOfWeekCoverNode.AppendChild(coverNode);
 		}
 		CoverRequirementsNode.AppendChild(dayOfWeekCoverNode);
-	}
+	}*/
 	
 	/*
 	 * WriteDayOffRequest takes the weight (priority) of the request, the
@@ -227,7 +230,30 @@ public class EmployeeXMLFileWriter
 		dayOffNode.AppendChild(dayOffDateNode);
 		DayOffRequestsNode.AppendChild(dayOffNode);
 	}
-	
+
+    /*
+     * WriteDayOffRequest takes the weight (priority) of the request, the
+      * employeeID of the person making the request, and the day that they
+      * request off in a DateTime.
+      */
+    public void WriteShiftOffRequest(string weight, string shiftID, string employeeID, DateTime date)
+    {
+        XmlNode shiftOffNode = xmlDoc.CreateElement("ShiftOff");
+        XmlAttribute weightAttribute = xmlDoc.CreateAttribute("weight");
+        weightAttribute.Value = weight;
+        shiftOffNode.Attributes.Append(weightAttribute);
+        XmlNode shiftOffShiftIDNode = xmlDoc.CreateElement("ShiftTypeID");
+        shiftOffShiftIDNode.InnerText = shiftID;
+        shiftOffNode.AppendChild(shiftOffShiftIDNode);
+        XmlNode shiftOffEmployeeNode = xmlDoc.CreateElement("EmployeeID");
+        shiftOffEmployeeNode.InnerText = employeeID;
+        shiftOffNode.AppendChild(shiftOffEmployeeNode);
+        XmlNode shiftOffDateNode = xmlDoc.CreateElement("Date");
+        shiftOffDateNode.InnerText = ConvertDTDate(date);
+        shiftOffNode.AppendChild(shiftOffDateNode);
+        ShiftOffRequestsNode.AppendChild(shiftOffNode);
+    }
+
     /*
      * ConvertDTDate takes in a DateTime and spits out the
      * Date in a string of the format yyyy-mm-dd,

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Tristan\\Desktop\\Group 11 Workspace\\Software-Engineering-Group-11\\Software-Engineering-Group-11\\EmployeeXML\\Software-Engineering-Group-11.csproj": {}
+    "C:\\Users\\Tristan\\Desktop\\Group 11 Workspace\\Software-Engineering-Group-11\\EmployeeXML\\Software-Engineering-Group-11.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Tristan\\Desktop\\Group 11 Workspace\\Software-Engineering-Group-11\\Software-Engineering-Group-11\\EmployeeXML\\Software-Engineering-Group-11.csproj": {
+    "C:\\Users\\Tristan\\Desktop\\Group 11 Workspace\\Software-Engineering-Group-11\\EmployeeXML\\Software-Engineering-Group-11.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tristan\\Desktop\\Group 11 Workspace\\Software-Engineering-Group-11\\Software-Engineering-Group-11\\EmployeeXML\\Software-Engineering-Group-11.csproj",
+        "projectUniqueName": "C:\\Users\\Tristan\\Desktop\\Group 11 Workspace\\Software-Engineering-Group-11\\EmployeeXML\\Software-Engineering-Group-11.csproj",
         "projectName": "Software-Engineering-Group-11",
-        "projectPath": "C:\\Users\\Tristan\\Desktop\\Group 11 Workspace\\Software-Engineering-Group-11\\Software-Engineering-Group-11\\EmployeeXML\\Software-Engineering-Group-11.csproj",
+        "projectPath": "C:\\Users\\Tristan\\Desktop\\Group 11 Workspace\\Software-Engineering-Group-11\\EmployeeXML\\Software-Engineering-Group-11.csproj",
         "packagesPath": "C:\\Users\\Tristan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tristan\\Desktop\\Group 11 Workspace\\Software-Engineering-Group-11\\Software-Engineering-Group-11\\EmployeeXML\\obj\\",
+        "outputPath": "C:\\Users\\Tristan\\Desktop\\Group 11 Workspace\\Software-Engineering-Group-11\\EmployeeXML\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
