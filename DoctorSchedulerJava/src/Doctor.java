@@ -1,6 +1,9 @@
 import java.util.ArrayList;
 
 public class Doctor {
+    //unique id of the doctor
+    private int ID;
+
     //name string
     private String name;
 
@@ -12,6 +15,19 @@ public class Doctor {
 
     //list of requested days / shifts on or off
     private ArrayList<Request> requests;
+
+    public Doctor(int ID, String name) {
+        this.ID = ID;
+        this.name = name;
+    }
+
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
+    }
 
     public String getName() {
         return name;
