@@ -17,20 +17,14 @@
         <constructionHeuristicType>WEAKEST_FIT</constructionHeuristicType>
     </constructionHeuristic>
     <localSearch>
-        <unionMoveSelector>
-            <!--moveListFactory>
-                <cacheType>PHASE</cacheType>
-                <moveListFactoryClass>org.optaplanner.examples.nurserostering.solver.move.factory.EmployeeChangeMoveFactory</moveListFactoryClass>
-            </moveListFactory>
-            <moveListFactory>
-                <cacheType>PHASE</cacheType>
-                <moveListFactoryClass>org.optaplanner.examples.nurserostering.solver.move.factory.ShiftAssignmentSwapMoveFactory</moveListFactoryClass>
-            </moveListFactory>
-            <moveListFactory>
-                <cacheType>STEP</cacheType>
-                <moveListFactoryClass>org.optaplanner.examples.nurserostering.solver.move.factory.ShiftAssignmentPillarPartSwapMoveFactory</moveListFactoryClass>
-            </moveListFactory-->
-        </unionMoveSelector>
+        <swapMoveSelector>
+            <entitySelector>
+                <entityClass>
+                    Shift
+                </entityClass>
+            </entitySelector>
+            <variableNameInclude>shiftDoctor</variableNameInclude>
+        </swapMoveSelector>
         <acceptor>
             <entityTabuSize>7</entityTabuSize>
         </acceptor>
