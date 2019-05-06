@@ -74,14 +74,6 @@ public class EmployeeXMLFileWriter
         XmlNode descNode = xmlDoc.CreateElement("Description");
         descNode.InnerText = desc;
         ShiftTypesNode.AppendChild(descNode);
-        XmlNode shiftSkillsNode = xmlDoc.CreateElement("Skills");
-        foreach(string i in skills)
-        {
-            XmlNode shiftSkillNode = xmlDoc.CreateElement("Skill");
-            shiftSkillNode.InnerText = i;
-            shiftSkillsNode.AppendChild(shiftSkillNode);
-        }
-        ShiftTypesNode.AppendChild(shiftSkillsNode);
     }
 
     /*
