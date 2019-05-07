@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2009 (http://www.altova.com) by SSS (.) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:annotation>
+        <xs:documentation>
+            Schema for personnel scheduling problems.
+        </xs:documentation>
+    </xs:annotation>
+    <xs:element name="SchedulingPeriod">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="StartDate" type="xs:date"/>
+                <xs:element name="EndDate" type="xs:date"/>
+                <xs:element name="ShiftTypes" type="ShiftTypes"/>
+                <xs:element name="Employees" type="Employees"/>
+                <xs:element name="DayOffRequests" type="DayOffRequests" minOccurs="0"/>
+                <xs:element name="DayOnRequests" type="DayOnRequests" minOccurs="0"/>
+                <xs:element name="ShiftOffRequests" type="ShiftOffRequests" minOccurs="0"/>
+                <xs:element name="ShiftOnRequests" type="ShiftOnRequests" minOccurs="0"/>
+            </xs:sequence>
+            <xs:attribute name="ID" type="xs:string" use="required"/>
+            <xs:attribute name="OrganisationID" type="xs:string" use="optional"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="ShiftTypes">
+        <xs:sequence>
+            <xs:element name="Shift" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="StartTime" type="xs:time"/>
+                        <xs:element name="EndTime" type="xs:time"/>
+                        <xs:element name="Description" type="xs:string" minOccurs="0"/>
+                    </xs:all>
+                    <xs:attribute name="ID" type="ID" use="required"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Employees">
+        <xs:sequence>
+            <xs:element name="Employee" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="ContractID" type="ID"/>
+                        <xs:element name="Name" type="xs:string" minOccurs="0"/>
+                        <xs:element name="HoursRemaining" type="xs:string"/>
+                    </xs:all>
+                    <xs:attribute name="ID" type="ID" use="required"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ConstraintAttributes">
+        <xs:attribute name="on" type="xs:boolean" use="optional"/>
+        <xs:attribute name="weight" type="xs:nonNegativeInteger" use="optional"/>
+    </xs:complexType>
+    <xs:complexType name="OnAndWeight">
+        <xs:simpleContent>
+            <xs:extension base="xs:nonNegativeInteger">
+                <xs:attribute name="on" type="xs:boolean" use="optional"/>
+                <xs:attribute name="weight" type="xs:nonNegativeInteger" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="WeightOnly">
+        <xs:simpleContent>
+            <xs:extension base="xs:boolean">
+                <xs:attribute name="weight" type="xs:nonNegativeInteger" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="DayOffRequests">
+        <xs:sequence>
+            <xs:element name="DayOff" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="EmployeeID" type="ID"/>
+                        <xs:element name="Date" type="xs:date"/>
+                    </xs:sequence>
+                    <xs:attribute name="weight" type="xs:nonNegativeInteger" use="required"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DayOnRequests">
+        <xs:sequence>
+            <xs:element name="DayOn" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="EmployeeID" type="ID"/>
+                        <xs:element name="Date" type="xs:date"/>
+                    </xs:sequence>
+                    <xs:attribute name="weight" type="xs:nonNegativeInteger" use="required"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ShiftOffRequests">
+        <xs:sequence>
+            <xs:element name="ShiftOff" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="ShiftTypeID" type="ID"/>
+                        <xs:element name="EmployeeID" type="ID"/>
+                        <xs:element name="Date" type="xs:date"/>
+                    </xs:sequence>
+                    <xs:attribute name="weight" type="xs:nonNegativeInteger" use="required"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ShiftOnRequests">
+        <xs:sequence>
+            <xs:element name="ShiftOn" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:choice>
+                            <xs:element name="ShiftTypeID" type="ID"/>
+                        </xs:choice>
+                        <xs:element name="EmployeeID" type="ID"/>
+                        <xs:element name="Date" type="xs:date"/>
+                    </xs:sequence>
+                    <xs:attribute name="weight" type="xs:nonNegativeInteger" use="required"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:simpleType name="WeekDay">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Sunday"/>
+            <xs:enumeration value="Monday"/>
+            <xs:enumeration value="Tuesday"/>
+            <xs:enumeration value="Wednesday"/>
+            <xs:enumeration value="Thursday"/>
+            <xs:enumeration value="Friday"/>
+            <xs:enumeration value="Saturday"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="WeekDayOrAny">
+        <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+    <xs:simpleType name="Weekend">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="SaturdaySunday"/>
+            <xs:enumeration value="FridaySaturdaySunday"/>
+            <xs:enumeration value="FridaySaturdaySundayMonday"/>
+            <xs:enumeration value="SaturdaySundayMonday"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ID">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="([a-zA-Z0-9._])+"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

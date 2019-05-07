@@ -15,7 +15,7 @@ public class Shift {
     private LocalDateTime endTime;
 
     //doctor to work that shift
-    @PlanningVariable
+    @PlanningVariable(valueRangeProviderRefs = {"employeeRange"})
     private Doctor shiftDoctor;
 
     public void setDayOfWeek(String dayOfWeek) {

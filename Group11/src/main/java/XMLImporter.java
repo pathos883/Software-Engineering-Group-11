@@ -58,6 +58,8 @@ public class XMLImporter {
                 }
             }
             //TODO generate shifts from the remaining information in the XML file
+
+
         }catch (ParserConfigurationException e) {
             e.printStackTrace();
         } catch (SAXException e) {

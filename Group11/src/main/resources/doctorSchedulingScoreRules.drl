@@ -1,0 +1,79 @@
+import Shift;
+import Request;
+import Doctor;
+import org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScore;
+import org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScoreHolder;
+
+global HardSoftScoreHolder scoreHolder;
+
+//hard constraints
+//consecutive shifts
+rule "consecutive shifts"
+    when
+        //get 2 shifts
+        $shift1 : Shift($endTime : endTime)
+        $shift2 : Shift($startTime : startTime)
+
+    then
+        //check if the shifts have the same start and endtime
+        if($endTime == $startTime){
+            //check if the shifts have the same doctor
+            if($shift1.getShiftDoctor() == $shift2.getShiftDoctor()){
+                //stop
+                   scoreHolder.addHardConstraintMatch(kcontext, - 10000);
+            }
+        }
+
+end
+
+//soft constraints
+//requests
+rule "request match"
+    when
+        //shift contains a doctor
+        $shift : Shift($doctor : shiftDoctor)
+        exists Shift(shiftDoctor == $doctor)
+    then
+        //check if any of the doctors requests overlap with the shift
+        for(Request r : $doctor.getShiftRequests()){
+           //if the request overlaps the shift
+           if((r.getStart().isBefore($shift.getStartTime()))&&(r.getEnd().isAfter($shift.getEndTime()))){
+               //check to increment or decrement
+               if(r.getWanted()){
+                   //increment the score
+                   scoreHolder.addSoftConstraintMatch(kcontext, + r.getPriority());
+               }
+               else{
+                   //decrement the score
+                   scoreHolder.addSoftConstraintMatch(kcontext, - r.getPriority());
+               }
+
+               //break
+               break;
+           }
+        }
+end
+
+//hours toward quota
+rule "hours quota"
+    when
+        //get the doctor's current hours
+        $hours : Doctor($hours : hoursWorked)
+        exists Doctor(hoursWorked == $hours)
+
+        //get the doctor's quota
+        $quota : Doctor($quota : hoursToWork)
+        exists Doctor(hoursToWork == $quota)
+
+    then
+        //if doctors hours are greater than the quota
+        if($hours > $quota){
+            //subtract score based on difference between hours worked and the quota
+            scoreHolder.addSoftConstraintMatch(kcontext, - ($hours - $quota));
+        }
+        //otherwise
+        else{
+            //subtract score based on difference between quota and hours worked
+            scoreHolder.addSoftConstraintMatch(kcontext, - ($quota - $hours));
+        }
+end

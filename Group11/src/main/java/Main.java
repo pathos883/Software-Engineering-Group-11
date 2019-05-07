@@ -11,7 +11,6 @@ public class Main {
             return;
         }
 	    //build the solver
-        //Within the solverconfig is a UnionMoveSelector, I need help updating it for our code -Tristan
         SolverFactory<DoctorSchedule> solverFactory = SolverFactory.createFromXmlResource("doctorSchedulerSolverConfig.xml");
         Solver<DoctorSchedule> solver = solverFactory.buildSolver();
 
@@ -23,7 +22,6 @@ public class Main {
         DoctorSchedule solvedCloudBalance = solver.solve(unsolvedDoctorSchedule);
 
         //export to csv
-        /*function to export to csv*/
         solvedCloudBalance.exportCSV("export" + LocalDateTime.now().toString() + ".csv");
     }
 }

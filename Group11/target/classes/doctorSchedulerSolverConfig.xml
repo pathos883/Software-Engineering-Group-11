@@ -19,9 +19,7 @@
     <localSearch>
         <swapMoveSelector>
             <entitySelector>
-                <entityClass>
-                    Shift
-                </entityClass>
+                <entityClass>Shift</entityClass>
             </entitySelector>
             <variableNameInclude>shiftDoctor</variableNameInclude>
         </swapMoveSelector>
