@@ -15,6 +15,8 @@ public class EmployeeXMLFileWriter
     private XmlNode EmployeesNode;
     private XmlNode DayOffRequestsNode;
     private XmlNode ShiftOffRequestsNode;
+    private XmlNode ShiftOnRequestsNode;
+    private XmlNode DayOnRequestsNode;
 
     public EmployeeXMLFileWriter(string ID, DateTime startTime, DateTime endTime)
     {
@@ -44,8 +46,12 @@ public class EmployeeXMLFileWriter
         rootNode.AppendChild(EmployeesNode);
         DayOffRequestsNode = xmlDoc.CreateElement("DayOffRequests");
         rootNode.AppendChild(DayOffRequestsNode);
+        DayOnRequestsNode = xmlDoc.CreateElement("DayOnRequests");
+        rootNode.AppendChild(DayOnRequestsNode);
         ShiftOffRequestsNode = xmlDoc.CreateElement("ShiftOffRequests");
         rootNode.AppendChild(ShiftOffRequestsNode);
+        ShiftOnRequestsNode = xmlDoc.CreateElement("ShiftOnRequests");
+        rootNode.AppendChild(ShiftOnRequestsNode);
         xmlDoc.AppendChild(rootNode);
     }
 
@@ -63,17 +69,19 @@ public class EmployeeXMLFileWriter
     public void WriteShift(string shiftID, DateTime startTime, DateTime endTime, string desc)
     {
         XmlNode shiftNode = xmlDoc.CreateElement("Shift");
+        ShiftTypesNode.AppendChild(shiftNode);
         XmlAttribute ID = xmlDoc.CreateAttribute("ID");
         ID.Value = shiftID;
+        shiftNode.Attributes.Append(shiftID);
         XmlNode startNode = xmlDoc.CreateElement("StartTime");
         startNode.InnerText = ConvertDTTime(startTime);
-        ShiftTypesNode.AppendChild(startNode);
+        shiftNode.AppendChild(startNode);
         XmlNode endNode = xmlDoc.CreateElement("EndTime");
         endNode.InnerText = ConvertDTTime(endTime);
-        ShiftTypesNode.AppendChild(endNode);
+        shiftNode.AppendChild(endNode);
         XmlNode descNode = xmlDoc.CreateElement("Description");
         descNode.InnerText = desc;
-        ShiftTypesNode.AppendChild(descNode);
+        shiftNode.AppendChild(descNode);
     }
     
     /*
@@ -81,10 +89,13 @@ public class EmployeeXMLFileWriter
      * refrenced in Day Off and Shift Off requests.
      * Contract ID to specify the full-time status (1, .75, .6, .5, AN)
      * employee's name
+     * hoursRemaining is how many hours the employee should be scheduled for over the
+     * period of start to end.
      */
-    public void WriteEmployee(string employeeID, string contractID, string name)
+    public void WriteEmployee(string employeeID, string contractID, string name, string hoursRemaining)
     {
         XmlNode employeeNode = xmlDoc.CreateElement("Employee");
+        EmployeesNode.AppendChild(employeeNode);
         XmlAttribute idAttribute = xmlDoc.CreateAttribute("ID");
         idAttribute.Value = employeeID;
         employeeNode.Attributes.Append(idAttribute);
@@ -92,8 +103,11 @@ public class EmployeeXMLFileWriter
         contractNode.InnerText = contractID;
         employeeNode.AppendChild(contractNode);
         XmlNode nameNode = xmlDoc.CreateElement("Name");
-        contractNode.InnerText = name;
+        nameNode.InnerText = name;
         employeeNode.AppendChild(nameNode);
+        XmlNode hoursNode = xmlDoc.createElement("HoursRemaining");
+        hoursNode.InnerText = hoursRemaining;
+        employeeNode.AppendChild(hoursNode);
     }
 
     /*
@@ -105,6 +119,7 @@ public class EmployeeXMLFileWriter
     public void WriteDayOffRequest(string weight, string employeeID, DateTime date)
     {
         XmlNode dayOffNode = xmlDoc.CreateElement("DayOff");
+        DayOffRequestsNode.AppendChild(dayOffNode);
         XmlAttribute weightAttribute = xmlDoc.CreateAttribute("weight");
         weightAttribute.Value = weight;
         dayOffNode.Attributes.Append(weightAttribute);
@@ -114,15 +129,35 @@ public class EmployeeXMLFileWriter
         XmlNode dayOffDateNode = xmlDoc.CreateElement("Date");
         dayOffDateNode.InnerText = ConvertDTDate(date);
         dayOffNode.AppendChild(dayOffDateNode);
-        DayOffRequestsNode.AppendChild(dayOffNode);
     }
 
     /*
-     * WriteDayOffRequest takes the weight (priority) of the request, the
-      * employeeID of the person making the request, and the day that they
-      * request off in a DateTime.
-      * the parameter date will only look at the day, month, and year of the DateTime
-      */
+     * WriteDayOnRequest takes the weight (priority) of the request, the
+     * employeeID of the person making the request, and the day that they
+     * request on in a DateTime.
+     * the parameter date will only look at the day, month, and year of the DateTime
+     */
+    public void WriteDayOnRequest(string weight, string employeeID, DateTime date)
+    {
+        XmlNode dayOnNode = xmlDoc.CreateElement("DayOn");
+        DayOnRequestsNode.AppendChild(dayOnNode);
+        XmlAttribute weightAttribute = xmlDoc.CreateAttribute("weight");
+        weightAttribute.Value = weight;
+        dayOnNode.Attributes.Append(weightAttribute);
+        XmlNode dayOnEmployeeNode = xmlDoc.CreateElement("EmployeeID");
+        dayOnEmployeeNode.InnerText = employeeID;
+        dayOnNode.AppendChild(dayOnEmployeeNode);
+        XmlNode dayOnDateNode = xmlDoc.CreateElement("Date");
+        dayOnDateNode.InnerText = ConvertDTDate(date);
+        dayOnNode.AppendChild(dayOnDateNode);
+    }
+
+    /*
+     * WriteShiftOffRequest takes the weight (priority) of the request, the
+     * employeeID of the person making the request, the ShiftID, and the day that they
+     * request off in a DateTime.
+     * the parameter date will only look at the day, month, and year of the DateTime
+     */
     public void WriteShiftOffRequest(string weight, string shiftID, string employeeID, DateTime date)
     {
         XmlNode shiftOffNode = xmlDoc.CreateElement("ShiftOff");
@@ -139,6 +174,30 @@ public class EmployeeXMLFileWriter
         shiftOffDateNode.InnerText = ConvertDTDate(date);
         shiftOffNode.AppendChild(shiftOffDateNode);
         ShiftOffRequestsNode.AppendChild(shiftOffNode);
+    }
+
+    /*
+     * WriteShiftOnRequest takes the weight (priority) of the request, the
+     * employeeID of the person making the request, the ShiftID, and the day that they
+     * request on in a DateTime.
+     * the parameter date will only look at the day, month, and year of the DateTime
+     */
+    public void WriteShiftOnRequest(string weight, string shiftID, string employeeID, DateTime date)
+    {
+        XmlNode shiftOnNode = xmlDoc.CreateElement("ShiftOn");
+        XmlAttribute weightAttribute = xmlDoc.CreateAttribute("weight");
+        weightAttribute.Value = weight;
+        shiftOnNode.Attributes.Append(weightAttribute);
+        XmlNode shiftOnShiftIDNode = xmlDoc.CreateElement("ShiftTypeID");
+        shiftOnShiftIDNode.InnerText = shiftID;
+        shiftOnNode.AppendChild(shiftOnShiftIDNode);
+        XmlNode shiftOnEmployeeNode = xmlDoc.CreateElement("EmployeeID");
+        shiftOnEmployeeNode.InnerText = employeeID;
+        shiftOnNode.AppendChild(shiftOnEmployeeNode);
+        XmlNode shiftOnDateNode = xmlDoc.CreateElement("Date");
+        shiftOnDateNode.InnerText = ConvertDTDate(date);
+        shiftOnNode.AppendChild(shiftOnDateNode);
+        ShiftOnRequestsNode.AppendChild(shiftOnNode);
     }
 
     /*
