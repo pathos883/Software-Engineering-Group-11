@@ -22,7 +22,7 @@ rule "consecutive shifts"
             //check if the shifts have the same doctor
             if($shift1.getShiftDoctor() == $shift2.getShiftDoctor()){
                 //stop
-                   scoreHolder.addHardConstraintMatch(kcontext, - 10000.0);
+                   scoreHolder.addHardConstraintMatch(kcontext, - 10000);
             }
         }
 
@@ -79,7 +79,7 @@ end
 rule "hours quota"
     when
         //get how many hours the doctor has worked
-        $doctor : Doctor($hours : hoursToWork)
+        $hours : Doctor($hours : hoursToWork)
         //exists Doctor(hoursWorked == $hours)
 
     then

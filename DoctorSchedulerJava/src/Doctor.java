@@ -7,9 +7,6 @@ public class Doctor {
     //name string
     private String name;
 
-    //hours worked so far
-    private double hoursWorked;
-
     //hours to work
     private double hoursToWork;
 
@@ -35,14 +32,6 @@ public class Doctor {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public double getHoursWorked() {
-        return hoursWorked;
-    }
-
-    public void setHoursWorked(double hoursWorked) {
-        this.hoursWorked = hoursWorked;
     }
 
     public double getHoursToWork() {
