@@ -1,3 +1,4 @@
+package Schedule;
 import org.optaplanner.core.api.domain.solution.PlanningEntityCollectionProperty;
 import org.optaplanner.core.api.domain.solution.PlanningScore;
 import org.optaplanner.core.api.domain.solution.PlanningSolution;
@@ -34,9 +35,17 @@ public class DoctorSchedule {
         shifts = new ArrayList<Shift>();
     }
 
+    public LocalDateTime getStartDate() {
+        return startDate;
+    }
+
     //setter for the startdate, used by import
     void setStartDate(LocalDateTime startDate) {
         this.startDate = startDate;
+    }
+
+    public LocalDateTime getEndDate() {
+        return endDate;
     }
 
     //setter for the enddate, used by import

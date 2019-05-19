@@ -1,6 +1,8 @@
+package Schedule;
+
 import org.optaplanner.core.api.solver.Solver;
 import org.optaplanner.core.api.solver.SolverFactory;
-
+import Schedule.DoctorSchedule;
 import java.time.LocalDateTime;
 
 public class Main {
