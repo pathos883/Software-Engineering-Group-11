@@ -1,4 +1,3 @@
-package Schedule;
 /*
  * XMLImporter.java
  * Tristan Gantz
@@ -14,20 +13,13 @@ import javax.xml.parsers.*;
         import javax.xml.xpath.*;
         import java.io.*;
 import java.time.LocalDateTime;
-import java.time.Period;
-import java.util.ArrayList;
-
-import static java.time.temporal.ChronoUnit.DAYS;
 //import DoctorSchedule;
 
 public class XMLImporter {
     public LocalDateTime convertDate(String date) {
         String [] arr = date.split("-");
         return LocalDateTime.of(Integer.parseInt(arr[0]), Integer.parseInt(arr[1]), Integer.parseInt(arr[2]),0,0,0);
-    }
-    public LocalDateTime convertTime(String date) {
-        String [] arr = date.split(":");
-        return LocalDateTime.of(0,1,1,Integer.parseInt(arr[0]), Integer.parseInt(arr[1]), Integer.parseInt(arr[2]));
+
     }
 
     /*
@@ -62,40 +54,10 @@ public class XMLImporter {
                 if (employeeNode.getNodeType() == Node.ELEMENT_NODE) {
                     Element employeeElement = (Element) employeeNode;
                     Doctor employee = new Doctor(Integer.parseInt(employeeElement.getAttribute("ID")), employeeElement.getElementsByTagName("Name").item(0).getTextContent());
-                    employee.setHoursToWork(Integer.parseInt(employeeElement.getElementsByTagName("HoursRemaining").item(0).getTextContent()));
                     schedule.addDoctor(employee);
                 }
             }
-            String shiftExpression = "/SchedulingPeriod/ShiftTypes";
-            NodeList shiftNodeList = (NodeList) xPath.compile(shiftExpression).evaluate(
-                    doc, XPathConstants.NODE);
-            ArrayList<ShiftType> shiftTypes = new ArrayList<ShiftType>();
-            for (int i = 0; i < shiftNodeList.getLength(); i++) {
-                Node shiftNode = shiftNodeList.item(i);
-                if (shiftNode.getNodeType() == Node.ELEMENT_NODE) {
-                    Element shiftElement = (Element) shiftNode;
-                    String start = shiftElement.getElementsByTagName("StartTime").item(0).getTextContent();
-                    String end = shiftElement.getElementsByTagName("EndTime").item(0).getTextContent();
-                    shiftTypes.add(new ShiftType(convertTime(start), convertTime(end)));
-                }
-            }
-            //generate shifts from the remaining information in the XML file
-            for (int i = 0; i < DAYS.between(schedule.getStartDate(), schedule.getEndDate()); i++) {
-                LocalDateTime day = schedule.getStartDate().plusDays(i);
-                for (ShiftType s : shiftTypes) {
-                    if (ShiftType.CrossesDays(s) && i == DAYS.between(schedule.getStartDate(), schedule.getEndDate()) + 1) {continue;}
-                    else {
-                        Shift shift = new Shift();
-                        shift.setStartTime(s.getStartTime().plus(Period.of(day.getYear(), day.getMonth().getValue(), day.getHour())));
-                        shift.setEndTime(s.getEndTime().plus(Period.of(day.getYear(), day.getMonth().getValue(), day.getHour())));
-                        if (ShiftType.CrossesDays(s)) {
-                            shift.setStartTime(shift.getEndTime().plusDays(1));
-                        }
-                        schedule.addShift(shift);
-                    }
-                }
-            }
-            //add all requests
+            //TODO generate shifts from the remaining information in the XML file
 
 
         }catch (ParserConfigurationException e) {

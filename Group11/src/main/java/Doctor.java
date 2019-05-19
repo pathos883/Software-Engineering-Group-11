@@ -1,5 +1,5 @@
-package Schedule;
 import java.util.ArrayList;
+
 
 public class Doctor {
     //unique id of the doctor
@@ -8,8 +8,11 @@ public class Doctor {
     //name string
     private String name;
 
+    //hours worked so far
+    private double hoursWorked;
+
     //hours to work
-    private int hoursToWork;
+    private double hoursToWork;
 
     //list of requested days / shifts on or off
     private ArrayList<Request> requests;
@@ -17,7 +20,6 @@ public class Doctor {
     public Doctor(int ID, String name) {
         this.ID = ID;
         this.name = name;
-        requests = new ArrayList<Request>();
     }
 
     public int getID() {
@@ -36,11 +38,19 @@ public class Doctor {
         this.name = name;
     }
 
-    public int getHoursToWork() {
+    public double getHoursWorked() {
+        return hoursWorked;
+    }
+
+    public void setHoursWorked(double hoursWorked) {
+        this.hoursWorked = hoursWorked;
+    }
+
+    public double getHoursToWork() {
         return hoursToWork;
     }
 
-    public void setHoursToWork(int hoursToWork) {
+    public void setHoursToWork(double hoursToWork) {
         this.hoursToWork = hoursToWork;
     }
 

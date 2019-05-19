@@ -1,4 +1,3 @@
-package Schedule;
 import org.optaplanner.core.api.domain.entity.PlanningEntity;
 import org.optaplanner.core.api.domain.variable.PlanningVariable;
 
@@ -16,7 +15,7 @@ public class Shift {
     private LocalDateTime endTime;
 
     //doctor to work that shift
-    @PlanningVariable(valueRangeProviderRefs = {"employeeRange"}, strengthComparatorClass = DoctorStrengthComparator.class)
+    @PlanningVariable(valueRangeProviderRefs = {"employeeRange"})
     private Doctor shiftDoctor;
 
     public void setDayOfWeek(String dayOfWeek) {

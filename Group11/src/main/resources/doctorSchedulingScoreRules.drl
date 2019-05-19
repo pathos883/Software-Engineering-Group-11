@@ -1,11 +1,8 @@
-import Schedule.Shift;
-import Schedule.Request;
-import Schedule.Doctor;
-import Schedule.DoctorSchedule;
+import Shift;
+import Request;
+import Doctor;
 import org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScore;
 import org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScoreHolder;
-import java.util.Date;
-import java.time.Duration;
 
 global HardSoftScoreHolder scoreHolder;
 
@@ -35,33 +32,20 @@ rule "request match"
     when
         //shift contains a doctor
         $shift : Shift($doctor : shiftDoctor)
-        //exists Shift(shiftDoctor == $doctor)
+        exists Shift(shiftDoctor == $doctor)
     then
         //check if any of the doctors requests overlap with the shift
         for(Request r : $doctor.getShiftRequests()){
            //if the request overlaps the shift
-           if((r.getStart().isBefore($shift.getEndTime()))&&(r.getEnd().isAfter($shift.getStartTime()))){
-               int duration;
+           if((r.getStart().isBefore($shift.getStartTime()))&&(r.getEnd().isAfter($shift.getEndTime()))){
                //check to increment or decrement
                if(r.getWanted()){
                    //increment the score
                    scoreHolder.addSoftConstraintMatch(kcontext, + r.getPriority());
-
-                   //get the time of the shift in hours
-                   duration = (int) (Duration.between($shift.getStartTime() , $shift.getEndTime()).toHours());
-
-                   //decrement the hours to work by the hours in the shift
-                   $doctor.setHoursToWork($doctor.getHoursToWork() - duration);
                }
                else{
                    //decrement the score
                    scoreHolder.addSoftConstraintMatch(kcontext, - r.getPriority());
-
-                   //get the time of the shift in hours
-                   duration = (int) (Duration.between($shift.getStartTime() , $shift.getEndTime()).toHours());
-
-                   //decrement the hours to work by the hours in the shift
-                   $doctor.setHoursToWork($doctor.getHoursToWork() - duration);
                }
 
                //break
@@ -73,19 +57,23 @@ end
 //hours toward quota
 rule "hours quota"
     when
-        //get how many hours the doctor has worked
-        $doctor : Doctor($hours : hoursToWork)
-        //exists Doctor(hoursWorked == $hours)
+        //get the doctor's current hours
+        $hours : Doctor($hours : hoursWorked)
+        exists Doctor(hoursWorked == $hours)
+
+        //get the doctor's quota
+        $quota : Doctor($quota : hoursToWork)
+        exists Doctor(hoursToWork == $quota)
 
     then
-        //if doctors hours are greater than 0
-        if($hours > 0){
-            //subtract score based on underworked hours
-            scoreHolder.addSoftConstraintMatch(kcontext, - $hours);
+        //if doctors hours are greater than the quota
+        if($hours > $quota){
+            //subtract score based on difference between hours worked and the quota
+            scoreHolder.addSoftConstraintMatch(kcontext, - ($hours - $quota));
         }
         //otherwise
         else{
-            //subtract score based on overworked hours
-            scoreHolder.addSoftConstraintMatch(kcontext, + $hours);
+            //subtract score based on difference between quota and hours worked
+            scoreHolder.addSoftConstraintMatch(kcontext, - ($quota - $hours));
         }
 end

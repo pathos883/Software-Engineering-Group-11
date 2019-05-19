@@ -2,26 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="615dba98-274e-48df-826f-1f3dd8767e0c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Schedule/Doctor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DoctorSchedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Schedule/DoctorSchedule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Schedule/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Schedule/Request.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Shift.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Schedule/Shift.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/XMLImporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Schedule/XMLImporter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/doctorSchedulerSolverConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/doctorSchedulerSolverConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/doctorSchedulingScoreRules.drl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/doctorSchedulingScoreRules.drl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sample.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sample.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Doctor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DoctorSchedule.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Request.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Shift.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/XMLImporter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/doctorSchedulerSolverConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/doctorSchedulerSolverConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/doctorSchedulingScoreRules.drl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/doctorSchedulingScoreRules.drl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DoctorSchedulerJava/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DoctorSchedulerJava/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DoctorSchedulerJava/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DoctorSchedulerJava/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DoctorSchedulerJava/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DoctorSchedulerJava/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DoctorSchedulerJava/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DoctorSchedulerJava/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DoctorSchedulerJava/447Code.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DoctorSchedulerJava/src/Doctor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DoctorSchedulerJava/src/DoctorSchedule.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DoctorSchedulerJava/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DoctorSchedulerJava/src/Request.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DoctorSchedulerJava/src/Shift.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DoctorSchedulerJava/src/XMLImporter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DoctorSchedulerJava/src/doctorSchedulerSolverConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DoctorSchedulerJava/src/doctorSchedulingScoreRules.drl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DoctorSchedulerJava/src/sample.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DoctorSchedulerJava/src/schedule.xsd" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -41,56 +40,77 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="41" lean-forward="true" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/doctorSchedulerSolverConfig.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/doctorSchedulingScoreRules.drl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1022">
-              <caret line="85" column="19" lean-forward="true" selection-start-line="85" selection-start-column="19" selection-end-line="85" selection-end-column="19" />
+            <state relative-caret-position="102">
+              <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Schedule/XMLImporter.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Shift.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="78" column="69" selection-start-line="78" selection-start-column="69" selection-end-line="78" selection-end-column="69" />
+            <state>
+              <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Doctor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
               <folding>
-                <element signature="e#3373#3384#0" expanded="true" />
+                <element signature="e#468#469#0" expanded="true" />
+                <element signature="e#493#494#0" expanded="true" />
+                <element signature="e#526#527#0" expanded="true" />
+                <element signature="e#554#555#0" expanded="true" />
+                <element signature="e#585#586#0" expanded="true" />
+                <element signature="e#612#613#0" expanded="true" />
+                <element signature="e#652#653#0" expanded="true" />
+                <element signature="e#684#685#0" expanded="true" />
+                <element signature="e#722#723#0" expanded="true" />
+                <element signature="e#756#757#0" expanded="true" />
+                <element signature="e#810#811#0" expanded="true" />
+                <element signature="e#856#857#0" expanded="true" />
+                <element signature="e#894#895#0" expanded="true" />
+                <element signature="e#928#929#0" expanded="true" />
+                <element signature="e#982#983#0" expanded="true" />
+                <element signature="e#1028#1029#0" expanded="true" />
+                <element signature="e#1080#1081#0" expanded="true" />
+                <element signature="e#1111#1112#0" expanded="true" />
+                <element signature="e#1181#1182#0" expanded="true" />
+                <element signature="e#1226#1227#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Schedule/Shift.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/DoctorSchedule.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/sample.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="733" lean-forward="true" selection-start-line="733" selection-end-line="733" />
-              <folding>
-                <element signature="n#ShiftTypes#0;n#SchedulingPeriod#0;n#!!top" />
-                <element signature="n#Employees#0;n#SchedulingPeriod#0;n#!!top" />
-                <element signature="n#DayOffRequests#0;n#SchedulingPeriod#0;n#!!top" />
-                <element signature="n#ShiftOffRequests#0;n#SchedulingPeriod#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Schedule/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="23" column="51" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
+            <state relative-caret-position="1020">
+              <caret line="91" column="33" selection-start-line="91" selection-start-column="33" selection-end-line="91" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -98,32 +118,27 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Schedule/Doctor.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/schedule.xsd">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="40" lean-forward="true" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+            <state relative-caret-position="194">
+              <caret line="111" column="43" selection-start-line="111" selection-start-column="43" selection-end-line="111" selection-end-column="43" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Schedule/Request.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/README.txt">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Schedule/DoctorStrengthComparator.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+            <state relative-caret-position="357">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
               <folding>
-                <element signature="e#161#162#0" expanded="true" />
-                <element signature="e#183#184#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -139,14 +154,6 @@
     </option>
   </component>
   <component name="FindInProjectRecents">
-    <findStrings>
-      <find>HardSoftScoreHolder</find>
-      <find>scoreHolder</find>
-      <find>setH</find>
-      <find>duration</find>
-      <find>doctorSt</find>
-      <find>sys</find>
-    </findStrings>
     <dirStrings>
       <dir>D:\Group11\src\main\java</dir>
     </dirStrings>
@@ -157,23 +164,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/schedule.xsd" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/sample.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/doctorSchedulerSolverConfig.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/Shift.java" />
         <option value="$PROJECT_DIR$/src/main/java/Doctor.java" />
         <option value="$PROJECT_DIR$/src/main/java/DoctorSchedule.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ShiftType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/XMLImporter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Request.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Shift.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Schedule/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/doctorSchedulerSolverConfig.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/doctorSchedulingScoreRules.drl" />
-        <option value="$PROJECT_DIR$/src/main/java/Schedule/Shift.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Schedule/DoctorStrengthComparator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Schedule/XMLImporter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Schedule/Doctor.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/schedule.xsd" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -188,11 +185,18 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="139" />
-    <option name="y" value="-8" />
-    <option name="width" value="864" />
-    <option name="height" value="946" />
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-1288" />
+    <option name="y" value="37" />
+    <option name="width" value="1296" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -218,51 +222,20 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="group11" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Group11" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="group11" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Group11" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Schedule" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="group11" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Group11" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Tristan\Desktop\Group 11 Workspace\Software-Engineering-Group-11\Group11" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -278,9 +251,9 @@
   </component>
   <component name="RunManager">
     <configuration name="Sample" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="Schedule.Main" />
+      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="group-11" />
-      <option name="PROGRAM_PARAMETERS" value="target/classes/Sample.xml" />
+      <option name="PROGRAM_PARAMETERS" value="Sample.xml" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -297,10 +270,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-1288" y="37" width="1296" height="1000" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15671642" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2289644" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -308,14 +280,14 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.35861322" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.38177624" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50053304" side_tool="true" weight="0.35861322" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -328,155 +300,97 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
   </component>
-  <component name="XDebuggerManager">
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="employee" />
-        <watch expression="((DeferredElementImpl)shiftElement).fBufferStr" custom="com.sun.org.apache.xerces.internal.dom.DeferredElementImpl" />
-        <watch expression="((DeferredElementImpl)shiftElement).attributes" custom="com.sun.org.apache.xerces.internal.dom.DeferredElementImpl" />
-      </configuration>
-    </watches-manager>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/group-11/pom.xml" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Doctor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Schedule/ShiftType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        <state>
           <folding>
-            <element signature="e#204#205#0" expanded="true" />
-            <element signature="e#236#237#0" expanded="true" />
-            <element signature="e#293#294#0" expanded="true" />
-            <element signature="e#335#336#0" expanded="true" />
-            <element signature="e#376#377#0" expanded="true" />
-            <element signature="e#406#407#0" expanded="true" />
-            <element signature="e#459#460#0" expanded="true" />
-            <element signature="e#497#498#0" expanded="true" />
+            <element signature="e#468#469#0" expanded="true" />
+            <element signature="e#493#494#0" expanded="true" />
+            <element signature="e#526#527#0" expanded="true" />
+            <element signature="e#554#555#0" expanded="true" />
+            <element signature="e#585#586#0" expanded="true" />
+            <element signature="e#612#613#0" expanded="true" />
+            <element signature="e#652#653#0" expanded="true" />
+            <element signature="e#684#685#0" expanded="true" />
+            <element signature="e#722#723#0" expanded="true" />
+            <element signature="e#756#757#0" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
+            <element signature="e#856#857#0" expanded="true" />
+            <element signature="e#894#895#0" expanded="true" />
+            <element signature="e#928#929#0" expanded="true" />
+            <element signature="e#982#983#0" expanded="true" />
+            <element signature="e#1028#1029#0" expanded="true" />
+            <element signature="e#1080#1081#0" expanded="true" />
+            <element signature="e#1111#1112#0" expanded="true" />
+            <element signature="e#1181#1182#0" expanded="true" />
+            <element signature="e#1226#1227#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sample.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/DoctorSchedule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="16" lean-forward="true" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/schedule.xsd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/doctorSchedulerSolverConfig.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Schedule/DoctorSchedule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="24" column="32" lean-forward="true" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Schedule/Shift.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Schedule/DoctorStrengthComparator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-          <folding>
-            <element signature="e#161#162#0" expanded="true" />
-            <element signature="e#183#184#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Schedule/Request.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/sample.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="733" lean-forward="true" selection-start-line="733" selection-end-line="733" />
-          <folding>
-            <element signature="n#ShiftTypes#0;n#SchedulingPeriod#0;n#!!top" />
-            <element signature="n#Employees#0;n#SchedulingPeriod#0;n#!!top" />
-            <element signature="n#DayOffRequests#0;n#SchedulingPeriod#0;n#!!top" />
-            <element signature="n#ShiftOffRequests#0;n#SchedulingPeriod#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Schedule/XMLImporter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="78" column="69" selection-start-line="78" selection-start-column="69" selection-end-line="78" selection-end-column="69" />
-          <folding>
-            <element signature="e#3373#3384#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/doctorSchedulingScoreRules.drl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1022">
-          <caret line="85" column="19" lean-forward="true" selection-start-line="85" selection-start-column="19" selection-end-line="85" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/optaplanner/optaplanner-core/7.20.0.Final/optaplanner-core-7.20.0.Final-sources.jar!/org/optaplanner/core/impl/solver/AbstractSolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="75" column="29" selection-start-line="75" selection-start-column="29" selection-end-line="75" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Schedule/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="23" column="51" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
+        <state relative-caret-position="1020">
+          <caret line="91" column="33" selection-start-line="91" selection-start-column="33" selection-end-line="91" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/optaplanner/optaplanner-core/7.20.0.Final/optaplanner-core-7.20.0.Final-sources.jar!/org/optaplanner/core/impl/solver/DefaultSolver.java">
+    <entry file="file://$PROJECT_DIR$/README.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="209" column="14" selection-start-line="209" selection-start-column="14" selection-end-line="209" selection-end-column="14" />
+        <state relative-caret-position="357">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Schedule/Doctor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/schedule.xsd">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="40" lean-forward="true" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+        <state relative-caret-position="194">
+          <caret line="111" column="43" selection-start-line="111" selection-start-column="43" selection-end-line="111" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/doctorSchedulerSolverConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/doctorSchedulingScoreRules.drl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Shift.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/group-11/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="10" lean-forward="true" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="41" lean-forward="true" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
         </state>
       </provider>
     </entry>

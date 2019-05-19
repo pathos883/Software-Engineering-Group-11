@@ -1,4 +1,3 @@
-package Schedule;
 import java.time.LocalDateTime;
 
 public class Request {
